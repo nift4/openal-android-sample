@@ -1,6 +1,6 @@
 package ca.mcgill.cim.srl.sample3daudio;
 
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -10,6 +10,7 @@ import org.pielot.openal.SoundEnv;
 import org.pielot.openal.Source;
 
 import java.io.IOException;
+import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity {
     SoundEnv soundEnv;
@@ -74,19 +75,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void updateLabel() {
-        // Example of a call to a native method
         TextView tv = (TextView) findViewById(R.id.sample_text);
-        tv.setText(String.format("(%.1f,%.1f)", xPos, yPos));
+        tv.setText(String.format(Locale.US, "(%.1f,%.1f)", xPos, yPos));
     }
 
-    /**
-     * A native method that is implemented by the 'native-lib' native library,
-     * which is packaged with this application.
-     */
-    public native String stringFromJNI();
-
-    // Used to load the 'native-lib' library on application startup.
-    static {
-        System.loadLibrary("native-lib");
-    }
 }
