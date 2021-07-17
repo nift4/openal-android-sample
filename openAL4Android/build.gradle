@@ -10,7 +10,18 @@ android {
 
         ndk {
             moduleName "openal"
-	    abiFilters 'armeabi-v7a'
+        }
+
+	externalNativeBuild {
+	    cmake {
+	        arguments '-DALSOFT_UTILS=OFF', '-DALSOFT_EXAMPLES=OFF'
+	    }
+	}
+    }
+
+    externalNativeBuild {
+        cmake {
+            path 'src/main/jni/CMakeLists.txt'
         }
     }
 
@@ -18,11 +29,6 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
-        }
-        externalNativeBuild {
-            ndkBuild {
-                path "src/main/jni/Android.mk"
-            }
         }
     }
 }
