@@ -1,6 +1,3 @@
-[submodule "openal/src/main/jni"]
-	path = openal/src/main/jni
-	url = https://github.com/kcat/openal-soft
 [submodule "openAL4Android/src/main/jni/openal"]
 	path = openAL4Android/src/main/jni/openal
 	url = https://github.com/nift4/openal-soft
