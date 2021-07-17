@@ -1,5 +1,5 @@
 #include "openalwrapper.h"
-
+#include <stdlib.h>
 
 // Initialization & Release
 // -----------------------------------

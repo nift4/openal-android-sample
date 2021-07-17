@@ -5,7 +5,7 @@
 
 JNIEXPORT jint JNICALL Java_org_pielot_openal_OpenAlBridge_init
 	(JNIEnv * env, jclass klass) {
-		init();
+		return init();
 	}
 
 JNIEXPORT jint JNICALL Java_org_pielot_openal_OpenAlBridge_addBuffer 
