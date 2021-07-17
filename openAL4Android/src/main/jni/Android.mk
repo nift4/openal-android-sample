@@ -4,8 +4,7 @@ ROOT_PATH := $(call my-dir)
 include $(CLEAR_VARS)
 LOCAL_MODULE := libopenal
 # We only have armeabi...
-# LOCAL_SRC_FILES := $(ROOT_PATH)/../jniLibs/$(TARGET_ARCH_ABI)/libopenal.so
-LOCAL_SRC_FILES := $(ROOT_PATH)/../jniLibs/armeabi/libopenal.so
+LOCAL_SRC_FILES := $(ROOT_PATH)/../libopenal.so
 include $(PREBUILT_SHARED_LIBRARY)
 
 include $(CLEAR_VARS)
